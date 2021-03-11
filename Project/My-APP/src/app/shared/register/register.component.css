@@ -1,0 +1,9 @@
+.checklist {
+    position: relative;
+    border-width: 5px;
+    margin:15px;
+  }
+
+  form input,select,button,label{
+    padding:5px 
+  }

@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+<section class="container">
+  <div class="row checklist">
+
+    <form [formGroup]="userModel" (ngSubmit)="onSubmitRegister()">
+      <div class="mb-3">
+      
+        <input type="text" class="form-control"  placeholder="Name" formControlName="name">
+      </div>
+
+
+      <div class="mb-3">
+  
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="mb-3">
+    
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      </div>
+
+      <div class="mb-3">
+       
+        <input type="password" class="form-control" placeholder="re_Password" formControlName="re_password">
+      </div>
+
+      <div class="mb-3">
+        
+        <input type="text" class="form-control"  placeholder="phone" formControlName="phone">
+      </div>
+      <div class="mb-3">
+        
+        <input type="text" class="form-control"  placeholder="age" formControlName="age">
+      </div>
+      <div class="mb-3">
+      <input type="radio" value="0" formControlName="role"> User
+      <input type="radio" value="2"  formControlName="role"> Writer
+      <input type="radio" value="1"  formControlName="role"> Admin
+    </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p>Already have an account? <a href="/login">Sign in</a>.</p>
+    </form>
+
+</div>
+</section>
+  <app-footer></app-footer>

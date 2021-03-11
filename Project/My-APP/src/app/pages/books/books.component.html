@@ -1,0 +1,17 @@
+<app-nav></app-nav>
+<section class="container">
+
+  <div class="card-group" *ngIf="allData?.length > 0">
+      <div class="card" style="text-align: center;" *ngFor="let book of allData">
+        <img [src]="ImgURL + book.bookimg" class="card-img-top" alt="..." style="height:220px">
+        <div class="card-body">
+          <a class="card-text" routerLink="/singleBook/{{book._id}}">{{book.authorName}}</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated {{book.updatedAt | date: 'dd/MM/yyyy'}}</small>
+        </div>
+      </div>
+    </div>
+
+</section>
+<app-footer></app-footer>
